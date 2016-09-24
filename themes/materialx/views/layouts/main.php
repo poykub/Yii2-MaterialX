@@ -48,28 +48,28 @@ MaterialAsset::register($this);
                 <!--First column-->
                 <div class="col-md-6 col-md-offset-1">
                     <h5 class="title">About</h5>
-                    <p>Wangsaphung Health Datacenter เป็นระบบแสดงข้อมูลผู้มารับบริการ โดยการเชื่อมโยงผ่านโปรแกรม EMR โดยเป็นการเชื่อมโยงมูลระหว่าง โรงพยาบาลกับโรงพยาบาลส่งเสริมสุขภาพ ภายในเขตอำเภอวังสะพุง.</p>
+                    <p>About of material x.</p>
                 </div>
                 <!--/.First column-->
 
                 <!--Second column-->
                 <div class="col-md-2 col-md-offset-1">
-                    <h5 class="title">How to</h5>
+                    <h5 class="title">Link 1</h5>
                     <ul>
-                        <li><a href="#!">วิธีสมัครเข้าใช้งาน</a></li>
-                        <li><a href="#!">การดูข้อมูล</a></li>
-                        <li><a href="#!">เข้าสู่ระบบไม่ได้?</a></li>
+                        <li><a href="#!">Submenu 1</a></li>
+                        <li><a href="#!">Submenu 2</a></li>
+                        <li><a href="#!">Submenu 3?</a></li>
                     </ul>
                 </div>
                 <!--/.Second column-->
 
                 <!--Third column-->
                 <div class="col-md-2">
-                    <h5 class="title">Connect</h5>
+                    <h5 class="title">Link 2</h5>
                     <ul>
-                        <li><a href="#!">Facebook</a></li>
-                        <li><a href="#!">Email</a></li>
-                        <li><a class="white-text" href="http://www.wanghospital.com" target="_blank">Wangsaphung Hospital</a></li>
+                        <li><a href="#!">Submenu 1</a></li>
+                        <li><a href="#!">Submenu 2</a></li>
+                        <li><a class="white-text" href="#">Submenu 3</a></li>
                     </ul>
                 </div>
                 <!--/.Third column-->
@@ -80,7 +80,7 @@ MaterialAsset::register($this);
         <!--Copyright-->
         <div class="footer-copyright kanit">
             <div class="container">
-                &copy;<?= date('Y') ?>  Wangsaphung Hospital All rights reserved. Theme by <a href="http://fezvrasta.github.io/bootstrap-material-design" class="right" target="_blank">FEDERICO ZIVOLO</a>
+                &copy;<?= date('Y') ?>  MaterialX All rights reserved. Theme by <a href="http://fezvrasta.github.io/bootstrap-material-design" class="right" target="_blank">FEDERICO ZIVOLO</a>
             </div>
         </div>
         <!--/.Copyright-->

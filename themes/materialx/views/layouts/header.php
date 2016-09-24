@@ -18,33 +18,33 @@ NavBar::begin([
 ]);
 
 if (Yii::$app->user->isGuest) {
-    $submenuItems[] = ['label' => 'สมัครผู้ใช้', 'url' => ['/user/registration/register']];
-    $submenuItems[] = ['label' => 'เข้าระบบ', 'url' => ['/user/security/login']];
+    $submenuItems[] = ['label' => 'Register', 'url' => ['/user/registration/register']];
+    $submenuItems[] = ['label' => 'Login', 'url' => ['/user/security/login']];
 } else {
     if (Yii::$app->user->can('admin')) {
         $submenuItems[] = [
-            'label' => 'ตั้งค่าระบบ',
+            'label' => 'Setting',
             'url' => ['/setting/index'],
             //'linkOptions' => ['target' => '_blank']
         ];
         $submenuItems[] = [
-            'label' => 'จัดการผู้ใช้งาน',
+            'label' => 'User Management',
             'url' => ['/user/admin/index'],
             'linkOptions' => [ ]
         ];
         $submenuItems[] = [
-            'label' => 'กำหนดสิทธิผู้ใช้งาน',
+            'label' => 'Permission',
             'url' => ['/rbac'],
             'linkOptions' => [ ]
         ];
     }
     $submenuItems[] = [
-        'label' => 'ข้อมูลส่วนตัว',
+        'label' => 'Profile',
         'url' => ['/user/settings/profile'],
         'linkOptions' => ['']
     ];
     $submenuItems[] = [
-        'label' => 'ออกจากระบบ',
+        'label' => 'Logout',
         'url' => ['/user/security/logout'],
         'linkOptions' => ['data-method' => 'post']
     ];
@@ -69,17 +69,13 @@ $rpt_mnu_itms[] = ['label' => '<i class="glyphicon glyphicon-list-alt"></i> ร�
 
 $menuItems = [
     ['label' =>
-        '<i class="glyphicon glyphicon-home"></i> หน้าแรก',
+        '<i class="glyphicon glyphicon-home"></i> Home',
         'url' => Yii::$app->homeUrl,
     ],
-    ['label' =>
-        '<i class="glyphicon glyphicon-list-alt"></i> รายงาน',
-        'items' => $rpt_mnu_itms
-    ],
-    ['label' => '<i class="glyphicon glyphicon-user"></i> ผู้ใช้ '.$username,
+    ['label' => '<i class="glyphicon glyphicon-user"></i> Account '.$username,
         'items' => $submenuItems
     ],
-    ['label' => 'เกี่ยวกับ', 'url' => ['/site/about']],
+    ['label' => 'About', 'url' => ['/site/about']],
 ];
 
 echo Nav::widget([
@@ -87,7 +83,7 @@ echo Nav::widget([
     'encodeLabels' => false,
     'items' => [
         [
-            'label' => 'WHDC',//'url' => ['/site/index']
+            'label' => 'Material X',//'url' => ['/site/index']
         ]
     ],
 ]);
