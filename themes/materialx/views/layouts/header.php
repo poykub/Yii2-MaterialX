@@ -50,32 +50,28 @@ if (Yii::$app->user->isGuest) {
     ];
 }
 
-$rpt_mnu_itms[] = ['label' => '<i class="glyphicon glyphicon-unchecked"></i> ข้อมูลพื้นฐาน', 'url' => ['/base-data/index']];
+$rpt_mnu_itms[] = ['label' => '<i class="glyphicon glyphicon-unchecked"></i> Link 1', 'url' => ['#!']];
 
-$rpt_mnu_itms[] = ['label' => '<i class="glyphicon glyphicon-list-alt"></i> ระบบรายงาน', 'url' => ['#!']];
-
-//$rpt_mnu_itms[] = ['label' => '<i class="glyphicon glyphicon-list-alt"></i> ระบบ HDC DATA-Exchange', 'url' => ['/hdcex/default/index']];
-
-//$rpt_mnu_itms[] = ['label' => '<i class="glyphicon glyphicon-list-alt"></i> ระบบข้อมูลแผนที่(GIS)', 'url' => ['/gis/default/index']];
-
-//$rpt_mnu_itms[] = ['label' => '<i class="glyphicon glyphicon-list-alt"></i> ระบบรายงาน(SQL)', 'url' => ['/sqlscript/index']];
+$rpt_mnu_itms[] = ['label' => '<i class="glyphicon glyphicon-list-alt"></i> Link 2', 'url' => ['#!']];
 
 
 /*if (!Yii::$app->user->isGuest) {
-    $rpt_mnu_itms[] = ['label' => '<i class="glyphicon glyphicon-retweet"></i> คำสั่ง SQL', 'url' => ['/runquery/index']];
-    $rpt_mnu_itms[] = ['label' => '<i class="glyphicon glyphicon-floppy-saved"></i> โปรแกรมตัดข้อมูล', 'url' => ['/site/download']];
+    $rpt_mnu_itms[] = ['label' => '<i class="glyphicon glyphicon-retweet"></i> Link 1', 'url' => ['#!']];
+    $rpt_mnu_itms[] = ['label' => '<i class="glyphicon glyphicon-floppy-saved"></i> Link 2', 'url' => ['#!']];
 }*/
-
 
 $menuItems = [
     ['label' =>
         '<i class="glyphicon glyphicon-home"></i> Home',
         'url' => Yii::$app->homeUrl,
     ],
+    ['label' => '<i class="glyphicon glyphicon-list"></i> Sub menu ',
+        'items' => $rpt_mnu_itms
+    ],
     ['label' => '<i class="glyphicon glyphicon-user"></i> Account '.$username,
         'items' => $submenuItems
     ],
-    ['label' => 'About', 'url' => ['/site/about']],
+    ['label' => '<i class="glyphicon glyphicon-grain"></i> About', 'url' => ['/site/about']],
 ];
 
 echo Nav::widget([
